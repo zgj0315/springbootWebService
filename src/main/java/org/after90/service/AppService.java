@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class AppService {
     public AppInfo getInfo(String strID) {
-        log.info("strID:", strID);
+        log.info("strID:{}", strID);
         AppInfo app = new AppInfo(strID, "WeiShang" + strID);
         return app;
     }

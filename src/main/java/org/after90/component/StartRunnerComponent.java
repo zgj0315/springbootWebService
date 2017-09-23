@@ -1,6 +1,7 @@
 package org.after90.component;
 
 import lombok.extern.slf4j.Slf4j;
+import org.after90.utils.ParaUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -17,8 +18,12 @@ public class StartRunnerComponent implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("start init");
 
-        log.info("end init");
+        if (ParaUtil.isTesting) {
+            log.info("this is a test");
+        } else {
+            log.info("this is not a test");
+        }
+
     }
 }
