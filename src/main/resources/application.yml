@@ -1,0 +1,7 @@
+proxy:
+  es:
+    servlet_url: /es/*
+    target_url: http://172.16.43.17:9200
+  kibana:
+    servlet_url: /kibana/*
+    target_url: http://172.16.43.17:5601/app/kibana
